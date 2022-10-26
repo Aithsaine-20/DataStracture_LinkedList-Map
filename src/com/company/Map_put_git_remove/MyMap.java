@@ -1,6 +1,6 @@
 package com.company.Map_put_git_remove;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class MyMap<K, V> {
 
@@ -84,6 +84,21 @@ public class MyMap<K, V> {
         }
         entries[i]=null;
 
+    }
+    public Set<K> keySet(){
+        Set<K> set = new HashSet<>();
+        for (int i=0 ; i< size ; i++){
+            set.add(entries[i].getKey());
+        }
+        return set;
+    }
+    public Collection<V> values(){
+        List<V > list = new ArrayList<>();
+        for (int i =0;i<size;i++){
+            list.add(entries[i].getValue());
+
+        }
+        return list;
     }
 
 }
